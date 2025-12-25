@@ -1,0 +1,526 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Annu Dhaneja | Premium Design & Gifts</title>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Poppins:wght@300;400;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="css/tailwind-output.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body data-theme="light">
+    <!-- Mobile Menu Overlay (Moved to Top) -->
+    <div id="mobile-menu-overlay" class="mobile-menu-overlay">
+        <button class="close-btn"
+            onclick="document.getElementById('mobile-menu-overlay').classList.remove('active')">&times;</button>
+        <nav class="mobile-nav-content">
+            <a href="#home" onclick="document.getElementById('mobile-menu-overlay').classList.remove('active')">Home</a>
+            <a href="#shop" onclick="document.getElementById('mobile-menu-overlay').classList.remove('active')">Shop</a>
+            <a href="#customize"
+                onclick="document.getElementById('mobile-menu-overlay').classList.remove('active')">Customize</a>
+            <a href="#services"
+                onclick="document.getElementById('mobile-menu-overlay').classList.remove('active')">Services</a>
+            <a href="#about"
+                onclick="document.getElementById('mobile-menu-overlay').classList.remove('active')">About</a>
+            <a href="#blog" onclick="document.getElementById('mobile-menu-overlay').classList.remove('active')">Blog</a>
+            <a href="#contact"
+                onclick="document.getElementById('mobile-menu-overlay').classList.remove('active')">Contact</a>
+            <a href="#customize" class="btn btn-primary"
+                onclick="document.getElementById('mobile-menu-overlay').classList.remove('active')">Customize Gift</a>
+        </nav>
+    </div>
+
+    <!-- Navbar -->
+    <!-- Navbar -->
+    <nav class="navbar glass">
+        <div class="container navbar-container">
+            <!-- Brand -->
+            <a href="#" class="brand-logo">
+                <img src="assets/img/logo.png" alt="Annu Dhaneja Logo" class="logo-img">
+            </a>
+
+            <!-- Desktop Links -->
+            <ul class="nav-links" id="nav-links">
+                <li><a href="#home" class="nav-link active">Home</a></li>
+                <li><a href="#shop" class="nav-link">Shop</a></li>
+                <li><a href="#customize" class="nav-link">Customize</a></li>
+                <li><a href="#services" class="nav-link">Services</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#blog" class="nav-link">Blog</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+
+            <!-- Extras (Theme + CTA + Mobile Toggle) -->
+            <div class="nav-extras">
+                <a href="#customize" class="btn btn-primary hidden-mobile"
+                    style="font-size: 0.9rem; padding: 8px 20px;">Customize Gift</a>
+
+                <button id="theme-toggle" class="btn-icon" aria-label="Toggle Theme">
+                    <!-- Sun Icon (for dark mode) -->
+                    <svg class="icon-sun" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                    <!-- Moon Icon (for light mode) -->
+                    <svg class="icon-moon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                </button>
+
+                <button id="mobile-menu-btn" class="btn-icon mobile-menu-toggle" aria-label="Open Menu"
+                    onclick="document.getElementById('mobile-menu-overlay').classList.add('active')">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                        style="pointer-events: none;">
+                        <line x1="3" y1="12" x2="21" y2="12"></line>
+                        <line x1="3" y1="6" x2="21" y2="6"></line>
+                        <line x1="3" y1="18" x2="21" y2="18"></line>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero section section-gradient">
+        <div class="container flex justify-between items-center" style="gap: var(--space-xl); flex-wrap: wrap-reverse;">
+            <div class="hero-content animate-on-scroll">
+                <span class="text-gradient"
+                    style="font-weight: 600; margin-bottom: var(--space-xs); display: block;">PREMIUM GIFTING &
+                    DESIGN</span>
+                <h1 class="h1 mb-4">Elevate Your Gifting Experience.</h1>
+                <p class="mb-4" style="color: var(--text-muted); font-size: 1.1rem; max-width: 480px;">
+                    Handcrafted designs, personalized gifts, and elegant branding solutions curated by <span
+                        class="text-signature">Annu Dhaneja</span>.
+                </p>
+                <div class="flex gap-md">
+                    <a href="#shop" class="btn btn-primary">Shop Collection</a>
+                    <a href="#customize" class="btn btn-outline">Customize Gift</a>
+                </div>
+            </div>
+            <!-- Hero Image / Visual Placeholder (using a stylized div for now if no image) -->
+            <div class="hero-visual animate-on-scroll"
+                style="flex: 1; min-width: 300px; display: flex; justify-content: center;">
+                <div class="glass"
+                    style="width: 100%; max-width: 400px; height: 500px; border-radius: 200px 200px 20px 20px; position: relative; overflow: hidden; display: flex; align-items: center; justify-content: center; background: linear-gradient(to bottom, var(--color-highlight), transparent);">
+                    <!-- Placeholder for a premium hero image -->
+                    <span style="opacity: 0.5; font-size: 8rem;">🎁</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Shop Section -->
+    <section id="shop" class="section section-surface">
+        <div class="container">
+            <div class="text-center mb-4 animate-on-scroll">
+                <span class="text-gradient" style="font-weight: 600; font-size: 0.9rem;">EXPLORE COLLECTIONS</span>
+                <h2 class="h2">Curated for Every Occasion</h2>
+                <p style="color: var(--text-muted);">Find the perfect gift to celebrate life's special moments.</p>
+            </div>
+
+            <!-- Shop Categories Grid -->
+            <div class="grid-shop animate-on-scroll">
+
+                <!-- Category 1: Birthday Gifts -->
+                <article class="card product-card" style="text-align: center;">
+                    <div class="product-image"
+                        style="height: 200px; display: flex; align-items: center; justify-content: center; background: var(--bg-secondary); border-radius: var(--radius-md) var(--radius-md) 0 0;">
+                        <!-- <span style="font-size: 4rem;">🎂</span> -->
+                         <img src="https://media.istockphoto.com/id/847049634/photo/many-gift-boxes-on-blue-background.jpg?s=612x612&w=0&k=20&c=qRMCVna2IdVY00e5OZMVfknSewNW_pmeyQ-Dnzavy1E=" alt="">
+                    </div>
+                    <div class="product-info">
+                        <h3>Birthday Gifts</h3>
+                        <p>Unique surprises for loved ones</p>
+                        <button class="btn-outline" style="width: 100%; margin-top: 10px;">Explore Range</button>
+                    </div>
+                </article>
+
+                <!-- Category 2: Wedding & Invitations -->
+                <article class="card product-card" style="text-align: center;">
+                    <div class="product-image"
+                        style="height: 200px; display: flex; align-items: center; justify-content: center; background: var(--bg-secondary); border-radius: var(--radius-md) var(--radius-md) 0 0;">
+                        <!-- <span style="font-size: 4rem;">💍</span> -->
+                         <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQkEeu-IYZfrJIfe3a6WWTDa230Mez3VJ6zvA&s" alt="">
+                    </div>
+                    <div class="product-info">
+                        <h3>Wedding & Invitations</h3>
+                        <p>Elegant suites for your big day</p>
+                        <button class="btn-outline" style="width: 100%; margin-top: 10px;">View Designs</button>
+                    </div>
+                </article>
+
+                <!-- Category 3: Festival Specials -->
+                <article class="card product-card" style="text-align: center;">
+                    <div class="product-image"
+                        style="height: 200px; display: flex; align-items: center; justify-content: center; background: var(--bg-secondary); border-radius: var(--radius-md) var(--radius-md) 0 0;">
+                        <!-- <span style="font-size: 4rem;">🪔</span> -->
+                         <img src="https://www.shutterstock.com/image-vector/festive-offers-dussehra-dhamaka-sale-260nw-2519295999.jpg" alt="">
+                    </div>
+                    <div class="product-info">
+                        <h3>Festival Specials</h3>
+                        <p>Celebrate with tradition & style</p>
+                        <button class="btn-outline" style="width: 100%; margin-top: 10px;">Shop Festive</button>
+                    </div>
+                </article>
+
+                <!-- Category 4: Personalized Gifts -->
+                <article class="card product-card" style="text-align: center;">
+                    <div class="product-image"
+                        style="height: 200px; display: flex; align-items: center; justify-content: center; background: var(--bg-secondary); border-radius: var(--radius-md) var(--radius-md) 0 0;">
+                        <!-- <span style="font-size: 4rem;">✨</span> -->
+                         <img src="https://www.royalgifts.co.in/wp-content/uploads/2019/01/01-4-1.jpg" alt="">
+                    </div>
+                    <div class="product-info">
+                        <h3>Personalized Gifts</h3>
+                        <p>Custom frames, mugs & more</p>
+                        <button class="btn-outline" style="width: 100%; margin-top: 10px;">Customize Now</button>
+                    </div>
+                </article>
+
+                <!-- Category 5: Art & Decor -->
+                <article class="card product-card" style="text-align: center;">
+                    <div class="product-image"
+                        style="height: 200px; display: flex; align-items: center; justify-content: center; background: var(--bg-secondary); border-radius: var(--radius-md) var(--radius-md) 0 0;">
+                        <!-- <span style="font-size: 4rem;">🎨</span> -->
+                         <img src="https://artstreet.in/cdn/shop/products/71ici_x9IaL_700x700.jpg?v=1678520443" alt="">
+                    </div>
+                    <div class="product-info">
+                        <h3>Art & Decor</h3>
+                        <p>Aesthetic pieces for your home</p>
+                        <button class="btn-outline" style="width: 100%; margin-top: 10px;">Browse Art</button>
+                    </div>
+                </article>
+
+                <!-- Category 6: Corporate Gifting -->
+                <article class="card product-card" style="text-align: center;">
+                    <div class="product-image"
+                        style="height: 200px; display: flex; align-items: center; justify-content: center; background: var(--bg-secondary); border-radius: var(--radius-md) var(--radius-md) 0 0;">
+                        <!-- <span style="font-size: 4rem;">🤝</span> -->
+
+                        <img src="https://brownliving.in/cdn/shop/files/sustainable-eco-friendly-corporate-gift-hampers-sustainable-gift-hampers-by-thenga-at-brownliving-223802.jpg?v=1734334674" alt="">
+                    </div>
+                    <div class="product-info">
+                        <h3>Corporate Gifting</h3>
+                        <p>Impress clients & employees</p>
+                        <button class="btn-outline" style="width: 100%; margin-top: 10px;">Inquire Now</button>
+                    </div>
+                </article>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Placeholder for next sections (Customize, Services, etc) -->
+    <!-- Customize Gift Section -->
+    <section id="customize" class="section section-glass" style="background: none;">
+        <div class="container">
+            <div class="text-center mb-4 animate-on-scroll">
+                <span class="text-gradient" style="font-weight: 600; font-size: 0.9rem;">PERSONALIZATION</span>
+                <h2 class="h2">Design Your Masterpiece</h2>
+                <p style="color: var(--text-muted);">Create a unique gift in 3 simple steps.</p>
+            </div>
+
+            <div class="glass animate-on-scroll"
+                style="border-radius: var(--radius-lg); padding: var(--space-lg); max-width: 900px; margin: 0 auto; box-shadow: var(--shadow-md);">
+                <!-- Wizard Steps -->
+                <div class="flex justify-between items-center mb-4"
+                    style="border-bottom: 2px solid var(--border-soft); padding-bottom: var(--space-md); position: relative;">
+                    <div class="step-indicator active" data-step="1">1. Upload Photo</div>
+                    <div class="step-indicator" data-step="2">2. Add Message</div>
+                    <div class="step-indicator" data-step="3">3. Choose Design</div>
+                </div>
+
+                <!-- Step Content -->
+                <form id="customize-form" onsubmit="event.preventDefault();">
+
+                    <!-- Step 1: Upload Photo -->
+                    <div class="step-content active" id="step-1">
+                        <h3 class="h3 mb-4">Start with a memory</h3>
+                        <div class="animate-on-scroll"
+                            style="text-align: center; padding: 40px; border: 2px dashed var(--border-soft); border-radius: var(--radius-md); cursor: pointer;">
+                            <span style="font-size: 3rem;">�</span>
+                            <p class="mt-2">Drag & Drop your photo here</p>
+                            <p style="font-size: 0.8rem; color: var(--text-muted);">or click to browse</p>
+                        </div>
+                        <div class="mt-4 text-center">
+                            <button class="btn btn-primary" onclick="nextStep(2)">Next: Add Message</button>
+                        </div>
+                    </div>
+
+                    <!-- Step 2: Add Message -->
+                    <div class="step-content hidden" id="step-2">
+                        <h3 class="h3 mb-4">Make it personal</h3>
+                        <div class="flex flex-col gap-md">
+                            <div class="form-group">
+                                <label style="display: block; margin-bottom: 8px; font-weight: 500;">Who is this
+                                    for?</label>
+                                <input type="text" placeholder="E.g., Mom, Best Friend, Partner"
+                                    style="width: 100%; padding: 12px; border-radius: var(--radius-sm); border: 1px solid var(--border-soft); background: var(--bg-main); color: var(--text-main);">
+                            </div>
+                            <div class="form-group">
+                                <label style="display: block; margin-bottom: 8px; font-weight: 500;">Your Heartfelt
+                                    Message</label>
+                                <textarea placeholder="Write something special..."
+                                    style="width: 100%; padding: 12px; border-radius: var(--radius-sm); border: 1px solid var(--border-soft); background: var(--bg-main); color: var(--text-main); font-family: inherit; resize: vertical;"
+                                    rows="4"></textarea>
+                            </div>
+                        </div>
+                        <div class="flex justify-between mt-4">
+                            <button class="btn btn-outline" onclick="nextStep(1)">Back</button>
+                            <button class="btn btn-primary" onclick="nextStep(3)">Next: Choose Design</button>
+                        </div>
+                    </div>
+
+                    <!-- Step 3: Choose Design -->
+                    <div class="step-content hidden" id="step-3">
+                        <h3 class="h3 mb-4">Select a Style</h3>
+                        <div class="grid-options">
+                            <label class="option-card">
+                                <input type="radio" name="design-style" value="minimal" checked>
+                                <div class="option-content">
+                                    <span style="font-size: 2rem;">✨</span>
+                                    <span>Minimalist</span>
+                                </div>
+                            </label>
+                            <label class="option-card">
+                                <input type="radio" name="design-style" value="floral">
+                                <div class="option-content">
+                                    <span style="font-size: 2rem;">🌸</span>
+                                    <span>Floral</span>
+                                </div>
+                            </label>
+                            <label class="option-card">
+                                <input type="radio" name="design-style" value="royal">
+                                <div class="option-content">
+                                    <span style="font-size: 2rem;">👑</span>
+                                    <span>Royal</span>
+                                </div>
+                            </label>
+                        </div>
+                        <div class="flex justify-between mt-4">
+                            <button class="btn btn-outline" onclick="nextStep(2)">Back</button>
+                            <button class="btn btn-primary">Create My Custom Gift</button>
+                        </div>
+                    </div>
+
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="section section-gradient">
+        <div class="container">
+            <div class="text-center mb-4 animate-on-scroll">
+                <span class="text-gradient" style="font-weight: 600; font-size: 0.9rem;">OUR EXPERTISE</span>
+                <h2 class="h2">Services We Offer</h2>
+                <p style="color: var(--text-muted);">More than just gifts. We build brands and memories.</p>
+            </div>
+
+            <div class="grid-shop animate-on-scroll">
+                <!-- Service 1 -->
+                <div class="card service-card text-center">
+                    <div class="icon-box mb-4">
+                        <span style="font-size: 2.5rem;">🎨</span>
+                    </div>
+                    <h3 class="h3" style="font-size: 1.5rem;">Graphic Design</h3>
+                    <p style="color: var(--text-muted);">Logos, visual assets, and marketing materials tailored to your
+                        brand.</p>
+                </div>
+
+                <!-- Service 2 -->
+                <div class="card service-card text-center">
+                    <div class="icon-box mb-4">
+                        <span style="font-size: 2.5rem;">✨</span>
+                    </div>
+                    <h3 class="h3" style="font-size: 1.5rem;">Branding</h3>
+                    <p style="color: var(--text-muted);">Complete brand identity packages to give your business a
+                        premium look.</p>
+                </div>
+
+                <!-- Service 3 -->
+                <div class="card service-card text-center">
+                    <div class="icon-box mb-4">
+                        <span style="font-size: 2.5rem;">�</span>
+                    </div>
+                    <h3 class="h3" style="font-size: 1.5rem;">Invitation Design</h3>
+                    <p style="color: var(--text-muted);">Bespoke wedding and event invitations that set the perfect
+                        tone.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="section section-surface" style="background: none;">
+        <div class="container flex items-center justify-between" style="gap: var(--space-xl); flex-wrap: wrap;">
+            <div class="about-content animate-on-scroll" style="flex: 1; min-width: 300px;">
+                <span class="text-gradient" style="font-weight: 600; font-size: 0.9rem;">ABOUT ANNU DHANEJA</span>
+                <h2 class="h2 mb-4">Your Creative Journey</h2>
+                <p class="mb-4" style="color: var(--text-muted); font-size: 1.05rem;">
+                    Creativity isn't just about making things look good—it's about how they make you feel. My journey
+                    started with a love for raw materials and a desire to tell stories through design.
+                </p>
+                <p class="mb-4" style="color: var(--text-muted);">
+                    At our studio, we don't just print designs; we craft emotions. Whether it's the joy of a
+                    personalized gift or the confidence of a strong brand identity, we are here to bring your vision to
+                    life with elegance and precision.
+                </p>
+                <div class="stats flex gap-lg mt-4">
+                    <div>
+                        <span class="h2 text-gradient">5+</span>
+                        <p style="font-size: 0.9rem;">Years of Creativity</p>
+                    </div>
+                    <div>
+                        <span class="h2 text-gradient">100%</span>
+                        <p style="font-size: 0.9rem;">Handcrafted Love</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="about-visual animate-on-scroll"
+                style="flex: 1; min-width: 300px; display: flex; justify-content: center;">
+                <div class="glass"
+                    style="width: 100%; max-width: 400px; height: 350px; border-radius: var(--radius-lg); display: flex; align-items: center; justify-content: center; position: relative;">
+                    <span style="font-size: 5rem;">✒️</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Blog Section (New) -->
+    <section id="blog" class="section section-glass">
+        <div class="container">
+            <div class="text-center mb-4 animate-on-scroll">
+                <span class="text-gradient" style="font-weight: 600; font-size: 0.9rem;">INSPIRATION</span>
+                <h2 class="h2">Latest from the Studio</h2>
+                <p style="color: var(--text-muted);">Design tips, gift ideas, and behind the scenes.</p>
+            </div>
+
+            <div class="grid-shop animate-on-scroll">
+                <!-- Blog 1 -->
+                <article class="card product-card">
+                    <div class="product-image"
+                        style="height: 180px; background: var(--bg-secondary); display: flex; align-items: center; justify-content: center;">
+                        <span style="font-size: 3rem;">🎁</span>
+                    </div>
+                    <div class="product-info">
+                        <span class="badge"
+                            style="position: static; display: inline-block; margin-bottom: 8px;">Gifting</span>
+                        <h3 style="font-size: 1.1rem;">5 Unique Gift Ideas for Her</h3>
+                        <p>Struggling to find the perfect gift? Here are our top picks for this season.</p>
+                        <a href="#" class="text-gradient" style="font-weight: 600; font-size: 0.9rem;">Read More
+                            &rarr;</a>
+                    </div>
+                </article>
+
+                <!-- Blog 2 -->
+                <article class="card product-card">
+                    <div class="product-image"
+                        style="height: 180px; background: var(--bg-secondary); display: flex; align-items: center; justify-content: center;">
+                        <span style="font-size: 3rem;">🪔</span>
+                    </div>
+                    <div class="product-info">
+                        <span class="badge"
+                            style="position: static; display: inline-block; margin-bottom: 8px;">Festive</span>
+                        <h3 style="font-size: 1.1rem;">Diwali Decor Trends 2025</h3>
+                        <p>Bring light and luxury to your home with these trending decor styles.</p>
+                        <a href="#" class="text-gradient" style="font-weight: 600; font-size: 0.9rem;">Read More
+                            &rarr;</a>
+                    </div>
+                </article>
+
+                <!-- Blog 3 -->
+                <article class="card product-card">
+                    <div class="product-image"
+                        style="height: 180px; background: var(--bg-secondary); display: flex; align-items: center; justify-content: center;">
+                        <span style="font-size: 3rem;">✨</span>
+                    </div>
+                    <div class="product-info">
+                        <span class="badge"
+                            style="position: static; display: inline-block; margin-bottom: 8px;">Design</span>
+                        <h3 style="font-size: 1.1rem;">Why Branding Matters?</h3>
+                        <p>How a strong visual identity can transform your small business.</p>
+                        <a href="#" class="text-gradient" style="font-weight: 600; font-size: 0.9rem;">Read More
+                            &rarr;</a>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section section-surface" style="background: none;">
+        <div class="container animate-on-scroll" style="max-width: 600px; text-align: center;">
+            <div class="mb-5">
+                <h2 class="h2">Let's Create Something Magic</h2>
+                <p style="color: var(--text-muted); margin-top: 10px;">Have a custom order or just want to say hi? We'd
+                    love to hear from you.</p>
+            </div>
+
+            <div class="glass" style="padding: var(--space-xl); border-radius: var(--radius-lg);">
+                <span style="font-size: 3rem; display: block; margin-bottom: var(--space-md);">💬</span>
+                <h3 class="h3 mb-4">Chat with us directly</h3>
+                <p class="mb-4" style="color: var(--text-muted);">The fastest way to reach us for orders and inquiries.
+                </p>
+
+                <a href="https://wa.me/1234567890" target="_blank" class="btn btn-primary"
+                    style="display: inline-flex; align-items: center; gap: 10px; width: 100%; justify-content: center; padding: 16px;">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path
+                            d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z">
+                        </path>
+                    </svg>
+                    <span>Chat on WhatsApp</span>
+                </a>
+
+                <div class="mt-4" style="font-size: 0.9rem; color: var(--text-muted);">
+                    <p>Or email us at: <a href="mailto:hello@annudhaneja.com"
+                            style="color: var(--color-primary);">hello@annudhaneja.com</a></p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Start -->
+    <footer class="section"
+        style="background: var(--bg-main); border-top: 1px solid var(--border-soft); margin-top: 0;">
+        <div class="container text-center">
+            <h2 style="font-size: 1.5rem; margin-bottom: var(--space-md);">Annu Dhaneja</h2>
+            <div class="flex justify-center gap-md mb-4">
+                <a href="#" style="opacity: 0.7;">Instagram</a>
+                <a href="#" style="opacity: 0.7;">Facebook</a>
+                <a href="#" style="opacity: 0.7;">WhatsApp</a>
+            </div>
+            <p style="color: var(--text-muted); font-size: 0.9rem;">&copy; 2025 Annu Dhaneja Designs. All reserved.</p>
+        </div>
+        <!-- Duplicate Overlay Removed -->
+
+        <!-- Script -->
+        <script src="js/script.js"></script>
+</body>
+
+</html>

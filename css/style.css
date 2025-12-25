@@ -1,0 +1,727 @@
+/* Main CSS - Annu Dhaneja Premium Website */
+
+/* 1. Variables & Theme Setup */
+:root {
+    /* Typography */
+    --font-main: 'Poppins', system-ui, sans-serif;
+    --font-size-base: 16px;
+    --line-height: 1.6;
+
+    /* Spacing scale */
+    --space-xs: 6px;
+    --space-sm: 12px;
+    --space-md: 20px;
+    --space-lg: 32px;
+    --space-xl: 56px;
+    --space-2xl: 80px;
+
+    /* Radius */
+    --radius-sm: 10px;
+    --radius-md: 18px;
+    --radius-lg: 28px;
+    --radius-xl: 36px;
+
+    /* Transitions */
+    --transition-fast: 0.2s ease;
+    --transition-mid: 0.35s ease;
+    --transition-slow: 0.6s ease;
+}
+
+:root[data-theme="light"] {
+    /* User Requested: Neon/Dark Theme as default replacement */
+    --bg-main: #0A0F1F;
+    --bg-secondary: #12172B;
+    --bg-card: #161B33;
+    --bg-glass: rgba(18, 23, 43, 0.7);
+    --bg-glass-card: rgba(22, 27, 51, 0.85);
+
+    /* Brand Colors */
+    --color-primary: #1F8AFF;
+    --color-accent: #4DEEEA;
+    --color-highlight: #B9A6FF;
+
+    /* Text */
+    --text-main: #EDEDED;
+    --text-muted: #9AA4B2;
+    --text-light: #7B8499;
+    --text-on-primary: #0A0F1F;
+
+    /* Borders */
+    --border-soft: rgba(77, 238, 234, 0.3);
+
+    /* Shadows */
+    --shadow-sm: 0 0 15px rgba(31, 138, 255, 0.3);
+    --shadow-md: 0 0 30px rgba(77, 238, 234, 0.4);
+    --shadow-lg: 0 0 50px rgba(31, 138, 255, 0.5);
+    --shadow-neon: 0 0 30px rgba(77, 238, 234, 0.5);
+
+    /* Gradients */
+    --gradient-main: linear-gradient(180deg, #0A0F1F 0%, #12172B 100%);
+    --gradient-accent: linear-gradient(135deg, #1F8AFF 0%, #4DEEEA 100%);
+}
+
+:root[data-theme="dark"] {
+    /* Backgrounds - Deep Luxury */
+    --bg-main: #0F0F0F;
+    --bg-secondary: #1A1A1A;
+    --bg-card: #232323;
+    --bg-glass: rgba(35, 35, 35, 0.7);
+    --bg-glass-card: rgba(45, 45, 45, 0.8);
+
+    /* Brand Colors */
+    --color-primary: #D4AF37;
+    /* Classic Gold */
+    --color-accent: #E5C558;
+    /* Lighter Gold */
+    --color-highlight: #FFF8D6;
+
+    /* Text */
+    --text-main: #F2F2F2;
+    --text-muted: #AFAFAF;
+    --text-dim: #777777;
+    --text-on-primary: #0F0F0F;
+
+    /* Borders */
+    --border-soft: rgba(212, 175, 55, 0.25);
+
+    /* Shadows / Glows */
+    --shadow-sm: 0 4px 12px rgba(0, 0, 0, 0.4);
+    --shadow-md: 0 12px 32px rgba(0, 0, 0, 0.6);
+    --shadow-lg: 0 20px 48px rgba(0, 0, 0, 0.8);
+
+    /* Gradients */
+    --gradient-main: linear-gradient(135deg, #1C1810 0%, #0F0F0F 100%);
+    --gradient-accent: linear-gradient(135deg, #D4AF37 0%, #F2D06B 100%);
+
+    /* Specific Premium Hero Gradient (Spotlight Effect) */
+    --bg-hero-premium: radial-gradient(circle at 50% 30%, #3e3218 0%, #0a0a0a 70%);
+}
+
+/* Hero Specific Override for Premium Feel */
+:root[data-theme="dark"] .hero {
+    background: var(--bg-hero-premium) !important;
+}
+
+/* 2. Reset & Base */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: var(--font-main);
+    background: var(--gradient-main);
+    color: var(--text-main);
+    font-size: var(--font-size-base);
+    line-height: var(--line-height);
+    min-height: 100vh;
+    overflow-x: hidden;
+    transition: background 0.3s ease, color 0.3s ease;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+    border-radius: var(--radius-sm);
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    transition: var(--transition-fast);
+}
+
+ul {
+    list-style: none;
+}
+
+button {
+    border: none;
+    background: none;
+    font-family: inherit;
+    cursor: pointer;
+}
+
+/* Accessibility Focus Styles */
+:focus-visible {
+    outline: 2px solid var(--color-primary);
+    outline-offset: 2px;
+}
+
+button:focus-visible,
+a:focus-visible {
+    border-radius: 4px;
+    /* Default small radius for focus ring */
+}
+
+.btn:focus-visible,
+.btn-icon:focus-visible {
+    box-shadow: 0 0 0 3px var(--bg-main), 0 0 0 5px var(--color-primary);
+    outline: none;
+}
+
+/* 3. Typography Utilities */
+.h1,
+.h2,
+.h3 {
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+.h1 {
+    font-size: 3.5rem;
+    letter-spacing: -1px;
+}
+
+.h2 {
+    font-size: 2.5rem;
+    letter-spacing: -0.5px;
+}
+
+.h3 {
+    font-size: 1.75rem;
+}
+
+.text-gradient {
+    background: var(--gradient-accent);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    display: inline-block;
+}
+
+.text-signature {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.4rem;
+    /* Adjusted for inline flow */
+    color: var(--color-accent);
+    font-weight: 700;
+    /* Bold for authority */
+    font-style: italic;
+    /* Elegance */
+    letter-spacing: 0.5px;
+    margin-left: 3px;
+    border-bottom: 2px solid var(--color-primary);
+    /* Professional emphasize */
+    padding-bottom: 1px;
+}
+
+/* 4. Layout & Container */
+.container {
+    max-width: 1200px;
+    width: 90%;
+    margin: 0 auto;
+}
+
+.section {
+    padding: var(--space-xl) 0;
+    position: relative;
+    /* Context */
+}
+
+/* Soft Section Separation */
+.section-gradient {
+    background: var(--gradient-main);
+}
+
+.section-surface {
+    background: var(--bg-secondary);
+    border-top: 1px solid var(--border-soft);
+    border-bottom: 1px solid var(--border-soft);
+}
+
+.section-glass {
+    background: var(--bg-glass-card);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border-top: 1px solid var(--border-soft);
+    box-shadow: 0 0 40px rgba(0, 0, 0, 0.2) inset;
+}
+
+/* 5. Components */
+.card {
+    background: var(--bg-card);
+    border-radius: var(--radius-lg);
+    padding: var(--space-lg);
+    transition: var(--transition-mid);
+    border: 1px solid var(--border-soft);
+}
+
+.card:hover {
+    box-shadow: var(--shadow-md);
+    transform: translateY(-8px);
+    border-color: var(--color-accent);
+}
+
+.btn {
+    display: inline-block;
+    padding: 14px 36px;
+    border-radius: var(--radius-xl);
+    font-weight: 600;
+    text-align: center;
+    transition: var(--transition-mid);
+}
+
+.btn-primary {
+    background: var(--gradient-accent);
+    color: var(--text-on-primary);
+    box-shadow: var(--shadow-sm);
+}
+
+.btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-md);
+    filter: brightness(1.1);
+}
+
+.btn-outline {
+    border: 2px solid var(--color-accent);
+    color: var(--color-accent);
+}
+
+.btn-outline:hover {
+    background: var(--color-accent);
+    color: var(--text-on-primary);
+}
+
+.btn-icon {
+    padding: 10px;
+    border-radius: 50%;
+    border: 1px solid var(--border-soft);
+    color: var(--text-main);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: var(--transition-mid);
+    background: var(--bg-glass-card);
+}
+
+.btn-icon:hover {
+    background: var(--bg-secondary);
+    box-shadow: var(--shadow-sm);
+    transform: rotate(15deg);
+}
+
+/* Theme Icons Logic */
+/* Theme Icons Logic */
+.icon-sun,
+.icon-moon {
+    transition: transform 0.5s ease;
+}
+
+/* Default (Light Mode) */
+.icon-sun {
+    display: none;
+}
+
+.icon-moon {
+    display: block;
+}
+
+/* Dark Mode Overrides */
+:root[data-theme="dark"] .icon-sun {
+    display: block;
+    transform: rotate(180deg);
+}
+
+:root[data-theme="dark"] .icon-moon {
+    display: none;
+}
+
+
+/* 6. Utility Classes */
+.flex {
+    display: flex;
+}
+
+.flex-col {
+    flex-direction: column;
+}
+
+.items-center {
+    align-items: center;
+}
+
+.justify-center {
+    justify-content: center;
+}
+
+.justify-between {
+    justify-content: space-between;
+}
+
+.gap-sm {
+    gap: var(--space-sm);
+}
+
+.gap-md {
+    gap: var(--space-md);
+}
+
+.gap-lg {
+    gap: var(--space-lg);
+}
+
+.text-center {
+    text-align: center;
+}
+
+.hidden {
+    display: none;
+}
+
+.mt-4 {
+    margin-top: var(--space-md);
+}
+
+.mb-4 {
+    margin-bottom: var(--space-md);
+}
+
+/* Glassmorphism */
+.glass {
+    background: var(--bg-glass);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--border-soft);
+}
+
+/* Mobile Responsive & Overlay */
+/* Glassseparator removed */
+
+/* 7. Section Specific - Hero */
+.hero {
+    min-height: 90vh;
+    display: flex;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: -20%;
+    right: -10%;
+    width: 50vw;
+    height: 50vw;
+    background: var(--color-primary);
+    filter: blur(100px);
+    opacity: 0.2;
+    border-radius: 50%;
+    z-index: -1;
+    animation: float 10s ease-in-out infinite;
+}
+
+/* Mobile Menu Overlay System */
+.mobile-menu-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: var(--bg-main);
+    z-index: 9999;
+    /* Max Z-index */
+
+    /* Strict Display Logic */
+    display: none;
+    flex-direction: column;
+    justify-content: flex-start;
+    /* Start from top */
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem;
+    padding-top: 100px;
+    /* Space for Close Button */
+    backdrop-filter: blur(10px);
+}
+
+.mobile-menu-overlay.active {
+    display: flex !important;
+}
+
+.mobile-nav-content {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    /* Tighter gap */
+    text-align: center;
+    width: 100%;
+}
+
+.mobile-nav-content a {
+    font-size: 1.6rem;
+    /* More balanced size */
+    color: var(--text-main);
+    font-weight: 500;
+    /* Lighter weight for elegance */
+    transition: color 0.3s;
+    letter-spacing: 0.5px;
+}
+
+.mobile-nav-content a:hover {
+    color: var(--color-accent);
+    transform: scale(1.05);
+    /* Subtle zoom */
+    display: inline-block;
+}
+
+.close-btn {
+    position: absolute;
+    top: 25px;
+    right: 25px;
+    background: none;
+    border: none;
+    font-size: 3rem;
+    /* Adjusted for better proportion */
+    color: var(--text-muted);
+    /* Softer color initially */
+    cursor: pointer;
+    line-height: .5;
+    z-index: 10001;
+    padding: 10px;
+    transition: color 0.3s;
+}
+
+.close-btn:hover {
+    color: var(--color-accent);
+    transform: rotate(90deg);
+    transition: all 0.3s ease;
+}
+
+.hero::after {
+    content: '';
+    position: absolute;
+    bottom: -10%;
+    left: -10%;
+    width: 40vw;
+    height: 40vw;
+    background: var(--color-accent);
+    filter: blur(100px);
+    opacity: 0.2;
+    border-radius: 50%;
+    z-index: -1;
+    animation: float 8s ease-in-out infinite reverse;
+}
+
+@keyframes float {
+    0% {
+        transform: translate(0, 0);
+    }
+
+    50% {
+        transform: translate(20px, 40px);
+    }
+
+    100% {
+        transform: translate(0, 0);
+    }
+}
+
+.hero-content {
+    max-width: 600px;
+}
+
+/* 8. Shop Section */
+.grid-shop {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: var(--space-lg);
+}
+
+.product-card {
+    overflow: hidden;
+    position: relative;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.product-image {
+    height: 250px;
+    background: var(--bg-secondary);
+    border-radius: var(--radius-md);
+    margin-bottom: var(--space-md);
+    overflow: hidden;
+    position: relative;
+}
+
+.product-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.6s ease;
+}
+
+.product-card:hover .product-image img {
+    transform: scale(1.05);
+}
+
+.product-info h3 {
+    font-size: 1.25rem;
+    margin-bottom: var(--space-xs);
+}
+
+.product-info p {
+    color: var(--text-muted);
+    font-size: 0.95rem;
+    margin-bottom: var(--space-sm);
+}
+
+/* 9. Animations */
+.animate-on-scroll {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.animate-on-scroll.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Badge */
+.badge {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background: var(--bg-glass-card);
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    backdrop-filter: blur(4px);
+}
+
+/* 11. Premium Navbar */
+.navbar {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    padding: 1rem 0;
+    border-bottom: 1px solid var(--border-soft);
+    transition: all 0.3s ease;
+}
+
+.navbar-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.brand-logo {
+    display: flex;
+    align-items: center;
+    padding: 0;
+    transition: transform 0.3s ease;
+}
+
+.logo-img {
+    height: 50px;
+    /* Adjust based on navbar height */
+    width: auto;
+    object-fit: contain;
+}
+
+.brand-logo:hover {
+    /* No effect requested */
+    transform: none;
+    filter: none;
+}
+
+.brand-logo:hover {
+    transform: scale(1.1) rotate(-2deg);
+    text-shadow: 0 0 15px var(--color-accent);
+}
+
+.nav-links {
+    display: flex;
+    gap: var(--space-md);
+    align-items: center;
+}
+
+.nav-link {
+    font-weight: 500;
+    color: var(--text-main);
+    position: relative;
+    padding: 4px 0;
+    font-size: 0.95rem;
+}
+
+/* Neon Glow Underline */
+.nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: var(--color-accent);
+    box-shadow: 0 0 8px var(--color-accent);
+    transition: width 0.3s ease;
+}
+
+.nav-link:hover::after,
+.nav-link.active::after {
+    width: 100%;
+}
+
+.nav-link:hover {
+    color: var(--color-accent);
+    text-shadow: 0 0 10px var(--color-accent);
+}
+
+.nav-extras {
+    display: flex;
+    align-items: center;
+    gap: var(--space-sm);
+}
+
+.mobile-menu-toggle {
+    display: none;
+    font-size: 1.5rem;
+    color: var(--text-main);
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    line-height: 1;
+    z-index: 10;
+}
+
+/* =========================================
+   12. Mobile Responsive (Final Override)
+   ========================================= */
+@media (max-width: 1024px) {
+
+    /* 1. Hide Desktop Links */
+    .nav-links {
+        display: none !important;
+    }
+
+    /* 2. Show Hamburger Menu */
+    .mobile-menu-toggle {
+        display: flex !important;
+    }
+
+    /* 3. Adjust Typography */
+    .h1 {
+        font-size: 2.5rem;
+    }
+
+    .h2 {
+        font-size: 2rem;
+    }
+
+    /* 4. Hide Desktop CTAs if needed */
+    .hidden-mobile {
+        display: none;
+    }
+
+    .section {
+        padding: var(--space-lg) 0;
+    }
+}
